@@ -8,19 +8,32 @@
   border-radius: 7px;
   cursor: pointer;
 }
-.img-container {
-  width: fit-content;
+.bg-read {
+  background-color: var(--read-bg);
 }
-.card-img {
-  padding: 20px;
-  border-radius: 50%;
+
+.card-avatar {
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
   background: var(--primary);
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .date-and-fav-container {
   display: flex;
+  gap: 2rem;
 }
 
 .desc {
   margin: 0.5rem 0;
+}
+.fav {
+  color: var(--primary);
+  font-weight: bold;
 }

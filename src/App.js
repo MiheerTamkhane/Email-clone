@@ -1,10 +1,16 @@
+import { CardList, Canvas, Filter } from "./components";
+import { useSelector } from "react-redux";
 import "./App.css";
-import { Card } from "./components";
+
 function App() {
+  const filter = useSelector((state) => state.allFilters);
   return (
     <div className="app">
-      <h1>Clone outlook email</h1>
-      <Card />
+      {/* <Filter /> */}
+      <div className="container">
+        <CardList />
+        {filter.byStatus.length > 0 && <Canvas />}
+      </div>
     </div>
   );
 }

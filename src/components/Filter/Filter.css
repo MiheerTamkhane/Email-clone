@@ -1,0 +1,30 @@
+.filter-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 1.4rem;
+  font-weight: bold;
+}
+.filter-container > span {
+  font-size: 16px;
+  padding: 0.2rem 0.5rem;
+}
+.filter-container > button {
+  font-size: 15px;
+  padding: 0.2rem 0.7rem;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  color: var(--text);
+}
+
+button.active {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background-color: var(--filter-btn);
+}
+button.fade {
+  opacity: 50%;
+}

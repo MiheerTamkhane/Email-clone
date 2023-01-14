@@ -1,4 +1,10 @@
 .app {
+  font-size: 14px;
+  max-height: 100vh;
   margin: 2rem 2.4rem;
   padding: 1.4rem;
+}
+.container {
+  display: flex;
+  gap: 1rem;
 }

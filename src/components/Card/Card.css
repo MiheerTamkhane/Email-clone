@@ -1,0 +1,26 @@
+.card-container {
+  max-width: 100%;
+  border: 1px solid var(--border);
+  background-color: white;
+  padding: 0.5rem 1.4rem;
+  display: flex;
+  gap: 1.2rem;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.img-container {
+  width: fit-content;
+}
+.card-img {
+  padding: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.date-and-fav-container {
+  display: flex;
+}
+
+.desc {
+  margin: 0.5rem 0;
+}

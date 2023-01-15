@@ -21,6 +21,9 @@
   align-items: center;
   justify-content: center;
 }
+.canvas-body {
+  width: 100%;
+}
 .canvas-head {
   display: flex;
   justify-content: space-between;

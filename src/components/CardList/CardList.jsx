@@ -2,12 +2,11 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllEmails, sortByFilterStatus } from "../../features";
 import { filterEmailsByStatus, filterEmailsByFavorite } from "../../utils";
-import { Card } from "../Card/Card";
-import { Filter } from "../Filter/Filter";
+import { Card, Filter, Loader, Pagination } from "../index";
 import "./CardList.css";
 export const CardList = () => {
   const dispatch = useDispatch();
-  const { emails } = useSelector((state) => state.allEmails);
+  const { emails, isLoading } = useSelector((state) => state.allEmails);
   const filter = useSelector((state) => state.allFilters);
 
   useEffect(() => {
@@ -21,9 +20,14 @@ export const CardList = () => {
   return (
     <div className="card-list-container">
       <Filter />
-      {filterByFavorite.map((email) => (
-        <Card key={email.id} email={email} />
-      ))}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        filterByFavorite.map((email) => <Card key={email.id} email={email} />)
+      )}
+      {filter.filterStatus === "BY_UNREAD" && !isLoading ? (
+        <Pagination />
+      ) : null}
     </div>
   );
 };

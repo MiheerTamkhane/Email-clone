@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  byStatus: [],
-  byFavorite: [],
-  currentEmail: {},
-  filterStatus: "",
+  byStatus: JSON.parse(localStorage.getItem("by_status")) || [],
+  byFavorite: JSON.parse(localStorage.getItem("by_favorite")) || [],
+  currentEmail: JSON.parse(localStorage.getItem("current_email")) || {},
+  filterStatus: JSON.parse(localStorage.getItem("filter_status")) || "",
 };
 
 const filterSlice = createSlice({
@@ -12,7 +12,7 @@ const filterSlice = createSlice({
   initialState,
   reducers: {
     filterByStatus: (state, { payload }) => {
-      state.byStatus = state.byStatus.includes(payload)
+      state.byStatus = state.byStatus?.includes(payload)
         ? state.byStatus
         : [...state.byStatus, payload];
     },

@@ -17,7 +17,7 @@ export const Filter = () => {
       <button
         className={`${
           (filter?.filterStatus === "BY_READ" && "active") ||
-          (filter?.byStatus.length === 0 && "fade")
+          (filter?.byStatus?.length === 0 && "fade")
         }`}
         onClick={() => {
           if (filter?.byStatus.length > 0) {

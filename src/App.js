@@ -9,7 +9,7 @@ function App() {
       {/* <Filter /> */}
       <div className="container">
         <CardList />
-        {filter.byStatus.length > 0 && <Canvas />}
+        {filter?.byStatus?.length > 0 && <Canvas />}
       </div>
     </div>
   );

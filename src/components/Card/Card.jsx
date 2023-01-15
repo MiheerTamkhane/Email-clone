@@ -13,7 +13,9 @@ export const Card = ({ email }) => {
     <div
       className={`card-container ${
         filter.byStatus.includes(email.id) ? "bg-read" : ""
-      }`}
+      }
+      ${filter.currentEmail.id === email.id ? "card-border" : ""}
+      `}
       onClick={() => {
         dispatch(addCurrentEmailToCanvas(email));
         dispatch(filterByStatus(email.id));

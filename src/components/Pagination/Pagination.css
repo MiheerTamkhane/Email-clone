@@ -1,0 +1,19 @@
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+.page-btn {
+  padding: 0.5rem 0.7rem;
+  outline: none;
+  border: none;
+  background: white;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text);
+  cursor: pointer;
+}
+.page-btn.active {
+  background-color: var(--primary);
+  color: white;
+}

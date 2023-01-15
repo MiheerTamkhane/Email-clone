@@ -22,14 +22,14 @@ export const Card = ({ email }) => {
       }}
     >
       <div>
-        <div className="card-avatar">{email.from.email[0].toUpperCase()}</div>
+        <div className="card-avatar">{email.from.name[0].toUpperCase()}</div>
       </div>
       <div className="card-body">
         <p>
           From:{" "}
           <b>
             {" "}
-            {email.from.email.split("@")[0]} {"<"}
+            {email.from.name} {"<"}
             {email.from.email}
             {">"}
           </b>

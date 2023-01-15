@@ -17,7 +17,7 @@ export const Canvas = () => {
 
   useEffect(() => {
     dispatch(getSingleEmail(currentEmail.id));
-  }, [currentEmail.id]);
+  }, [currentEmail.id, dispatch]);
   return (
     <div className="canvas">
       <div>

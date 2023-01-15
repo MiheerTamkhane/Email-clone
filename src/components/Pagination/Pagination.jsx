@@ -7,11 +7,9 @@ export const Pagination = () => {
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
   const pages = [1, 2];
-  //   const { itemsCount, pageSize, currentPage } = props;
-  //   const pagesCount = Math.ceil(itemsCount / pageSize);
   useEffect(() => {
     dispatch(getAllEmails(page));
-  }, [page]);
+  }, [page, dispatch]);
 
   return (
     <nav>

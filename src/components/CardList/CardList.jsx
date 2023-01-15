@@ -12,7 +12,7 @@ export const CardList = () => {
   useEffect(() => {
     dispatch(getAllEmails());
     dispatch(sortByFilterStatus("BY_UNREAD"));
-  }, []);
+  }, [dispatch]);
 
   const filterByStatus = filterEmailsByStatus(emails, filter);
   const filterByFavorite = filterEmailsByFavorite(filterByStatus, filter);
